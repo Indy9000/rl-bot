@@ -1,0 +1,6 @@
+.paket/
+node_modules/
+out/
+packages/
+paket.lock
+

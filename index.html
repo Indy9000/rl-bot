@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+  <script src="color-palettes.js"></script>
+</head>
+<body style="font-family:sans-serif">
+    
+	<h1><!-- [title] -->Reinforcement Learning Bot<!-- [/title] --></h1>
+  
+  <!-- [body] -->
+  <canvas align="center" id="canvas" width="640" height="480"></canvas>
+  <script src="node_modules/core-js/client/core.min.js"></script>
+  <script src="node_modules/requirejs/require.js"></script>
+  <script>
+    requirejs.config({
+        // Set the baseUrl to the path of the compiled JS code
+        baseUrl: 'out',
+        paths: {
+            // Explicit path to core lib (relative to baseUrl, omit .js)
+            'fable-core': '../node_modules/fable-core/fable-core.min'
+        }
+    });
+    // Load the entry file of the app (use array, omit .js)
+    requirejs(["app"]);
+  </script>
+  <!-- [/body] -->
+</body>
+</html>
